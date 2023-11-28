@@ -1,0 +1,13 @@
+.brands {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.brand {
+  width: 200px;
+  height: 200px;
+}
+.brand img {
+  width: 100%;
+  height: 100%;
+}
