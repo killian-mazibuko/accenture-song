@@ -1,7 +1,6 @@
 import './Brands.css';
 import React, { useEffect, useReducer } from 'react';
 import axios from 'axios';
-import logger from 'use-reducer-logger';
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -17,7 +16,7 @@ const reducer = (state, action) => {
 };
 
 function Brands() {
-  const [{ loading, error, brands }, dispatch] = useReducer(logger(reducer), {
+  const [{ loading, error, brands }, dispatch] = useReducer(reducer, {
     brands: [],
     loading: true,
     error: '',

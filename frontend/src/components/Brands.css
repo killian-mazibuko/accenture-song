@@ -1,11 +1,14 @@
 .brands {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .brand {
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
+  margin: 20px;
+  padding: 10px;
 }
 .brand img {
   width: 100%;
