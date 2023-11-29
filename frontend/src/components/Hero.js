@@ -3,7 +3,7 @@ import Button from 'react-bootstrap/Button';
 function Hero() {
   return (
     <>
-      <Card className="bg-dark text-white">
+      <Card className="bg-dark text-white" style={{ borderRadius: 0 }}>
         <Card.Img
           src="/images/confidence.jpeg"
           style={{ height: 400 }}

@@ -1,9 +1,13 @@
 import './Brands.css';
-import React, { useEffect, useReducer } from 'react';
+import React, { useEffect, useReducer, useState } from 'react';
 import axios from 'axios';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import LoadingBox from '../components/LoadingBox';
+import MessageBox from '../components/MessageBox';
+import { getError } from '../utils';
+import SearchBox from './SearchBox';
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -24,18 +28,30 @@ function Brands() {
     loading: true,
     error: '',
   });
+  const [sortBy, setSortBy] = useState('arrangement');
+  const [name, setName] = useState('');
+  const [desc, setDesc] = useState('off');
+
+  const updateState = (sortByP, nameP, descP) => {
+    setSortBy(sortByP);
+    setName(nameP);
+    setDesc(descP);
+  };
+
   useEffect(() => {
-    const fetchData = async () => {
+    const fetchData = async (sortBy = '', name = '', desc = '') => {
       dispatch({ type: 'FETCH_REQUEST' });
       try {
-        const result = await axios.get('/api/brands');
+        const result = await axios.get(
+          `http://localhost:5000/api/brands?sortBy=${sortBy}&name=${name}&desc=${desc}`
+        );
         dispatch({ type: 'FETCH_SUCCESS', payload: result.data });
       } catch (err) {
-        dispatch({ type: 'FETCH_FAIL', payload: err.message });
+        dispatch({ type: 'FETCH_FAIL', payload: getError(err) });
       }
     };
-    fetchData();
-  }, []);
+    fetchData(sortBy, name, desc);
+  }, [sortBy, name, desc]);
   return (
     <Container>
       <Row style={{ 'margin-top': 10, 'margin-bottom': 10 }}>
@@ -45,15 +61,18 @@ function Brands() {
         </Col>
       </Row>
       <Row>
+        <SearchBox updateState={updateState} />
+      </Row>
+      <Row>
         {' '}
         <h2>
           <strong>Trusted by leading brands</strong>
         </h2>
         <div className="brands">
           {loading ? (
-            <div>Loading...</div>
+            <LoadingBox />
           ) : error ? (
-            <div>{error}</div>
+            <MessageBox variant="danger">{error}</MessageBox>
           ) : (
             brands.map((brand) => (
               <div className="brand" key={brand.name}>

@@ -12,11 +12,11 @@ function Footer() {
             <img src="/images/rectangle.svg" alt="rectangle" /> Contact us
           </Col>
         </Row>
-        <Row style={{ 'margin-top': 10, 'margin-bottom': 10 }}>
+        <Row style={{ 'margin-top': 20, 'margin-bottom': 20 }}>
           <Col md={8}>
             <h2>
-              Have a project in <br />
-              mind?
+              Have a project in mind? <br />
+              Let's make it happen
             </h2>
           </Col>
           <Col md={4}>
@@ -26,11 +26,7 @@ function Footer() {
             enquirie@website.co.za
           </Col>
         </Row>
-        <Row style={{ 'margin-top': 10, 'margin-bottom': 10 }}>
-          {' '}
-          <h2>Let's make it happen</h2>
-        </Row>
-        <Row style={{ 'margin-top': 10, 'margin-bottom': 10 }}>
+        <Row style={{ 'margin-top': 20, 'margin-bottom': 20 }}>
           <Col md={8}>
             <Row>
               <Col md={3}>
