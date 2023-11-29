@@ -5,7 +5,7 @@ import Col from 'react-bootstrap/Col';
 function WeDo() {
   return (
     <Container>
-      <Row>
+      <Row style={{ 'margin-top': 10, 'margin-bottom': 10 }}>
         <Col>
           <img src="/images/rectangle.svg" alt="rectangle" /> What we do
         </Col>
@@ -14,8 +14,10 @@ function WeDo() {
         <Col>
           <p>
             <h2>
-              We offer a complete range of bespoke design and development
-              services to help you turn your ideas into digital masterpieces
+              <strong>
+                We offer a complete range of bespoke design and development
+                services to help you turn your ideas into digital masterpieces
+              </strong>
             </h2>
           </p>
         </Col>

@@ -2,6 +2,8 @@ import './Brands.css';
 import React, { useEffect, useReducer } from 'react';
 import axios from 'axios';
 import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -36,20 +38,31 @@ function Brands() {
   }, []);
   return (
     <Container>
-      <h1>Trusted by leading brands</h1>
-      <div className="brands">
-        {loading ? (
-          <div>Loading...</div>
-        ) : error ? (
-          <div>{error}</div>
-        ) : (
-          brands.map((brand) => (
-            <div className="brand" key={brand.name}>
-              <img src={brand.image} alt={brand.name} />
-            </div>
-          ))
-        )}
-      </div>
+      <Row style={{ 'margin-top': 10, 'margin-bottom': 10 }}>
+        <Col>
+          <img src="/images/rectangle.svg" alt="rectangle" /> You’ll be in good
+          company
+        </Col>
+      </Row>
+      <Row>
+        {' '}
+        <h2>
+          <strong>Trusted by leading brands</strong>
+        </h2>
+        <div className="brands">
+          {loading ? (
+            <div>Loading...</div>
+          ) : error ? (
+            <div>{error}</div>
+          ) : (
+            brands.map((brand) => (
+              <div className="brand" key={brand.name}>
+                <img src={brand.image} alt={brand.name} />
+              </div>
+            ))
+          )}
+        </div>
+      </Row>
     </Container>
   );
 }

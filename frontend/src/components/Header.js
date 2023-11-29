@@ -2,7 +2,6 @@ import React from 'react';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import btnPrimary from '../btn-primary.png';
 import './Header.css';
 
 function Header() {
@@ -31,7 +30,7 @@ function Header() {
             </Nav>
             <Nav className="ms-auto">
               <button className="p-btn">
-                <img src={btnPrimary} alt="button primary" />
+                <img src="/images/btn-primary.png" alt="button primary" />
               </button>
             </Nav>
           </Navbar.Collapse>
