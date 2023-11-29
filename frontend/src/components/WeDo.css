@@ -1,0 +1,12 @@
+.no-border {
+  border-style: none;
+}
+
+.do-icon {
+  height: 50px;
+  width: 50px;
+}
+
+.do-card-item {
+  margin-top: 20px;
+}

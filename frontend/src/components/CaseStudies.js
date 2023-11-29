@@ -3,11 +3,12 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Carousel from 'react-bootstrap/Carousel';
 import Image from 'react-bootstrap/Image';
+import './CaseStudies.css';
 
 function CaseStudies() {
   return (
     <Container>
-      <Row style={{ 'margin-top': 10, 'margin-bottom': 10 }}>
+      <Row className="heading">
         <Col>
           <img src="/images/rectangle.svg" alt="rectangle" /> Case studies
         </Col>
@@ -16,8 +17,8 @@ function CaseStudies() {
         <Carousel>
           <Carousel.Item>
             <Image
+              className="carousel-image"
               src="/images/olympian.jpeg"
-              style={{ width: '100%', height: 400 }}
               text="First slide"
             />
             <Carousel.Caption>
@@ -29,8 +30,8 @@ function CaseStudies() {
           </Carousel.Item>
           <Carousel.Item>
             <Image
+              className="carousel-image"
               src="/images/dragon.jpeg"
-              style={{ width: '100%', height: 400 }}
               text="Second slide"
             />
             <Carousel.Caption>
@@ -40,8 +41,8 @@ function CaseStudies() {
           </Carousel.Item>
           <Carousel.Item>
             <Image
+              className="carousel-image"
               src="/images/skhokho.jpeg"
-              style={{ width: '100%', height: 400 }}
               text="Third slide"
             />
             <Carousel.Caption>

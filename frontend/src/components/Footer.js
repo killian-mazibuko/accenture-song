@@ -1,18 +1,19 @@
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import './Footer.css';
 
 function Footer() {
   return (
-    <footer style={{ backgroundColor: '#70259b', color: 'white' }}>
+    <footer>
       <Container>
         {' '}
-        <Row style={{ 'margin-top': 10, 'margin-bottom': 10 }}>
+        <Row className="heading">
           <Col>
             <img src="/images/rectangle.svg" alt="rectangle" /> Contact us
           </Col>
         </Row>
-        <Row style={{ 'margin-top': 20, 'margin-bottom': 20 }}>
+        <Row className="footer-row">
           <Col md={8}>
             <h2>
               Have a project in mind? <br />
@@ -26,7 +27,7 @@ function Footer() {
             enquirie@website.co.za
           </Col>
         </Row>
-        <Row style={{ 'margin-top': 20, 'margin-bottom': 20 }}>
+        <Row className="footer-row">
           <Col md={8}>
             <Row>
               <Col md={3}>

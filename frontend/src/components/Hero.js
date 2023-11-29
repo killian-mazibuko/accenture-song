@@ -1,9 +1,11 @@
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
+import './Hero.css';
+
 function Hero() {
   return (
     <>
-      <Card className="bg-dark text-white" style={{ borderRadius: 0 }}>
+      <Card className="bg-dark text-white hero-card">
         <Card.Img
           src="/images/confidence.jpeg"
           style={{ height: 400 }}

@@ -13,9 +13,6 @@ export default function SearchBox(props) {
   const submitHandler = (e) => {
     e.preventDefault();
     props.updateState(sortBy, name, desc);
-    console.log('Name: ', name);
-    console.log('Sort By: ', sortBy);
-    console.log('Desc: ', desc);
   };
   return (
     <Form className="search" onSubmit={submitHandler}>

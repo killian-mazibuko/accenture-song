@@ -54,7 +54,7 @@ function Brands() {
   }, [sortBy, name, desc]);
   return (
     <Container>
-      <Row style={{ 'margin-top': 10, 'margin-bottom': 10 }}>
+      <Row className="heading">
         <Col>
           <img src="/images/rectangle.svg" alt="rectangle" /> You’ll be in good
           company
