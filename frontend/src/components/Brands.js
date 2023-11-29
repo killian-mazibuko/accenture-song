@@ -1,6 +1,7 @@
 import './Brands.css';
 import React, { useEffect, useReducer } from 'react';
 import axios from 'axios';
+import Container from 'react-bootstrap/Container';
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -34,7 +35,7 @@ function Brands() {
     fetchData();
   }, []);
   return (
-    <div>
+    <Container>
       <h1>Trusted by leading brands</h1>
       <div className="brands">
         {loading ? (
@@ -49,7 +50,7 @@ function Brands() {
           ))
         )}
       </div>
-    </div>
+    </Container>
   );
 }
 export default Brands;

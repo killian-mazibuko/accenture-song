@@ -1,9 +1,7 @@
-import Button from 'react-bootstrap/Button';
 import React from 'react';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import logo from '../logo.png';
 import btnPrimary from '../btn-primary.png';
 import './Header.css';
 
@@ -17,7 +15,11 @@ function Header() {
       >
         <Container>
           <Navbar.Brand href="#">
-            <img src={logo} alt="logo" style={{ width: 100, height: 40 }} />
+            <img
+              src="/images/logo.svg"
+              alt="logo"
+              style={{ width: 100, height: 40 }}
+            />
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
