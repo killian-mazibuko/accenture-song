@@ -4,7 +4,6 @@ import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 import seedRouter from './routes/seedRoutes.js';
 import brandRouter from './routes/brandRoutes.js';
-import cors from 'cors';
 
 dotenv.config();
 
@@ -17,7 +16,6 @@ mongoose
     console.log(err.message);
   });
 const app = express();
-app.use(cors());
 app.use('/api/seed', seedRouter);
 app.use('/api/brands', brandRouter);
 
