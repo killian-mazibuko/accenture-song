@@ -31,24 +31,29 @@ function Footer() {
           <Col md={8}>
             <Row>
               <Col md={3}>
-                Terms of service <br />
-                Privacy policy <br />
-                Impressum
+                <a href="#">Terms of service</a> <br />
+                <a href="#">Privacy policy</a> <br />
+                <a href="#">Impressum</a>
               </Col>
               <Col md={3}>
-                Facebook <br />
-                Instagram <br />
-                Twitter
+                <a href="https://www.facebook.com">Facebook</a>
+                <br />
+                <a href="https://www.instagram.com">Instragram</a>
+                <br />
+                <a href="https://www.twitter.com">Twitter</a>
               </Col>
               <Col md={3}>
-                Github <br />
-                Linkedin <br />
-                Teams
+                <a href="https://github.com">Github</a>
+                <br />
+                <a href="https://linkedin.com">Linkedin</a> <br />
+                <a href="https://www.microsoft.com/en-us/microsoft-teams/log-in">
+                  Teams
+                </a>
               </Col>
               <Col md={3}>
-                Youtube <br />
-                Behance <br />
-                Dribbble
+                <a href="https://youtube.com">Youtube</a> <br />
+                <a href="https://behance.com">Behance</a> <br />
+                <a href="https://dribble.com">Dribble</a>
               </Col>
             </Row>
           </Col>
