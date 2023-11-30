@@ -23,8 +23,9 @@ function Footer() {
           <Col md={4}>
             22 Street Name, Suburb, 8000, <br />
             Cape Town, South Africa <br />
-            +27 21 431 0001 <br />
-            enquirie@website.co.za
+            <a href="tel:+27214310001">+27 21 431 0001</a>
+            <br />
+            <a href="mailto:enquirie@website.co.za">enquirie@website.co.za</a>
           </Col>
         </Row>
         <Row className="footer-row">
